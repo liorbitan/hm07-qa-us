@@ -12,6 +12,7 @@ test('', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
+	const data = await response.json();
 	} catch (error) {
 		console.error(error);
 	}
