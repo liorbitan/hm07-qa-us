@@ -13,7 +13,7 @@ test('', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-	const data = await response.json();
+	const requestBody = await response.json();
 	} catch (error) {
 		console.error(error);
 	}
