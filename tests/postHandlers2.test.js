@@ -33,5 +33,5 @@ test('', async () => {
 		console.error(error);
 	}
 	const costCheck = await response.json();
-	expect (costCheck['Speedy']['deliveryPrice']).toBe(7);
+	expect (costCheck['Order and Go']['deliveryPrice']).toBe(5);
 });
