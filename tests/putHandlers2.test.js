@@ -4,6 +4,7 @@ const config = require('../config');
 const requestBody = {}
 
 test('', async () => {
+	let response
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/4`, {
 			method: 'PUT',
