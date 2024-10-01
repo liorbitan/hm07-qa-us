@@ -3,7 +3,7 @@ const config = require('../config');
 
 test('', async () => {
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/5`, {
 			method: 'DELETE',
 		});
 	} catch (error) {
