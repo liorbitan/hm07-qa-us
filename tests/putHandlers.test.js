@@ -5,7 +5,7 @@ const requestBody = {}
 
 test('', async () => {
     try {
-		const response = await fetch(`${config.API_URL}/your/endpoint`, {
+		const response = await fetch(`${config.API_URL}/api/v1/products/7`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
