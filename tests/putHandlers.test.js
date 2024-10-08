@@ -3,7 +3,7 @@ const config = require('../config');
 
 const requestBody = {}
 
-test('Check the response body should be 175', async () => {
+test('Changing the kit', async () => {
 	let response
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/7`, {
@@ -13,7 +13,7 @@ test('Check the response body should be 175', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-	const requestBody = await response.json(175);
+	const requestBody = await response.json();
 	} catch (error) {
 		console.error(error);
 	}
