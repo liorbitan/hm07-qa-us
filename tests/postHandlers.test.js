@@ -19,7 +19,7 @@ const requestBody = {
     "deliveryTime": 7
 }
 
-test('', async () => {
+test('The response code should be 7', async () => {
 	let response
     try {
 			response = await fetch(`${config.API_URL}/api/v1/couriers/check`, {
@@ -32,6 +32,6 @@ test('', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-	const costCheck = await response.json();
+    const costCheck = await response.json();
 	expect (costCheck['Speedy']['deliveryPrice']).toBe(7);
 });
