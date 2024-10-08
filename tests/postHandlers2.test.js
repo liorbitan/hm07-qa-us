@@ -19,7 +19,7 @@ const requestBody = {
     "deliveryTime": 7
 }
 
-test('', async () => {
+test('The response code should be 5', async () => {
 	let response
     try {
 			response = await fetch(`${config.API_URL}/api/v1/couriers/check`, {
