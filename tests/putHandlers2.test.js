@@ -3,8 +3,8 @@ const config = require('../config');
 
 const requestBody = {}
 
-test('Changing the kit', async () => {
-	let response
+test('Status should be 200', async () => {
+	let actualStatus;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/4`, {
 			method: 'PUT',
@@ -13,8 +13,9 @@ test('Changing the kit', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-	const requestBody = await response.json();
+	actualStatus = response.status;
 	} catch (error) {
 		console.error(error);
 	}
+	expect(actualStatus).toBe(200);
 });
