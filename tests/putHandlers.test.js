@@ -1,9 +1,11 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 
-const requestBody = {}
+const requestBody = {
+    "price": 175
+}
 
-test('Status should be 200', async () => {
+test('The response should be 200', async () => {
 	let actualStatus;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/7`, {
